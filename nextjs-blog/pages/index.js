@@ -3,6 +3,16 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from "next/link"
 
+
+export const getStaticProps = async () => {
+
+  return{
+    props: {}
+  }
+
+}
+
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -13,7 +23,17 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        
+
+          <div style={{height:"10%" , width:"100%"}}>
+            <Image src={"/home_page_hero_image.jpg"} 
+                layout="responsive"
+                objectFit='cover'
+                height= "20vh"
+                width= "100%"
+                
+            /> 
+          </div>
+         
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -24,9 +44,11 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <Link href="/posts" className={styles.card}>
-            <h2>Posts &rarr;</h2>
-            <p>Details about Posts</p>
+          <Link href="/posts">
+            <div className={styles.card}>
+                <h2>Posts &rarr;</h2>
+                <p>Details about Posts</p>
+            </div>
           </Link>
         </div>
       </main>
