@@ -46,7 +46,7 @@ export default function Post({post, comments}) {
         {
             comments.map( 
                 com => (
-                    <div>
+                    <div key = {com.id}>
                         <h4>by {com.email}</h4>
                         <p>{com.body}</p>
                     </div>

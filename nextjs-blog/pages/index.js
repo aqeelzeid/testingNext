@@ -30,6 +30,7 @@ export default function Home() {
                 objectFit='cover'
                 height= "20vh"
                 width= "100%"
+                alt='Beautiful Mountains'
                 
             /> 
           </div>
